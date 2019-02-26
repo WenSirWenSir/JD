@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+<<<<<<< HEAD
+=======
+    signingConfigs {
+        Yazhou {
+            keyAlias 'WenSir'
+            keyPassword 'capitalist12..@..'
+            storeFile file('/Users/mac/Desktop/keystor/YaZhou')
+            storePassword 'capitalist12..@..'
+        }
+    }
+>>>>>>> check update on 2019-02-27
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.zbyj.Yazhou"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+<<<<<<< HEAD
+        }
+    }
+    sourceSets{
+        main{
+=======
+            debuggable false
+            signingConfig signingConfigs.Yazhou
+        }
+        debug {
+            signingConfig signingConfigs.Yazhou
+        }
+    }
+    sourceSets {
+        main {
+>>>>>>> check update on 2019-02-27
+            jniLibs.srcDir 'libs'
+        }
+
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/BaiduLBS_Android.jar')
+}
